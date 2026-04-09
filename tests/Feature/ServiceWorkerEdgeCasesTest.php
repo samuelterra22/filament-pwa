@@ -60,7 +60,7 @@ test('service worker returns 500 when File::get throws exception', function () {
         ->shouldReceive('exists')
         ->andReturn(true)
         ->shouldReceive('get')
-        ->andThrow(new \RuntimeException('Permission denied'));
+        ->andThrow(new RuntimeException('Permission denied'));
 
     $this->get('/serviceworker.js')->assertStatus(500);
 });

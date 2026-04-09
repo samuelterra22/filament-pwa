@@ -80,7 +80,7 @@ test('icon translations work with all 8 sizes', function () {
 
         expect($translation)
             ->toContain($size)
-            ->not->toBe("filament-pwa::messages.form.icon");
+            ->not->toBe('filament-pwa::messages.form.icon');
     }
 });
 
@@ -97,7 +97,7 @@ test('splash translations work with all 10 sizes', function () {
 
         expect($translation)
             ->toContain($size)
-            ->not->toBe("filament-pwa::messages.form.splash");
+            ->not->toBe('filament-pwa::messages.form.splash');
     }
 });
 
