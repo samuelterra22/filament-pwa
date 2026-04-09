@@ -1,0 +1,34 @@
+services:
+  app:
+    build: .
+    volumes:
+      - .:/app
+    working_dir: /app
+    command: tail -f /dev/null
+
+  test:
+    build: .
+    volumes:
+      - .:/app
+    working_dir: /app
+    command: vendor/bin/pest
+    profiles:
+      - test
+
+  lint:
+    build: .
+    volumes:
+      - .:/app
+    working_dir: /app
+    command: vendor/bin/pint
+    profiles:
+      - lint
+
+  analyse:
+    build: .
+    volumes:
+      - .:/app
+    working_dir: /app
+    command: vendor/bin/phpstan analyse
+    profiles:
+      - analyse

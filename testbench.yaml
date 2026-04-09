@@ -1,0 +1,6 @@
+providers:
+  - SamuelTerra22\FilamentPwa\FilamentPwaServiceProvider
+
+workbench:
+  start: '/'
+  install: true

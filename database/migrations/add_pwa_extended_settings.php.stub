@@ -1,0 +1,19 @@
+<?php
+
+use Spatie\LaravelSettings\Migrations\SettingsMigration;
+
+return new class extends SettingsMigration
+{
+    public function up(): void
+    {
+        $this->migrator->add('pwa.description', '');
+        $this->migrator->add('pwa.scope', '/');
+        $this->migrator->add('pwa.lang', '');
+        $this->migrator->add('pwa.dir', 'auto');
+        $this->migrator->add('pwa.id', '');
+        $this->migrator->add('pwa.categories', []);
+        $this->migrator->add('pwa.display_override', []);
+        $this->migrator->add('pwa.screenshots', []);
+        $this->migrator->add('pwa.icon_purpose', 'any');
+    }
+};
