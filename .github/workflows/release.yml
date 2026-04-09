@@ -28,7 +28,7 @@ jobs:
         uses: mathieudutour/github-tag-action@v6.2
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          initial_release_type: major
+          default_bump: major
 
       - name: Create a GitHub release
         uses: ncipollo/release-action@v1
