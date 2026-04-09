@@ -24,6 +24,8 @@ use Spatie\LaravelSettings\SettingsRepositories\DatabaseSettingsRepository;
 
 class TestCase extends Orchestra
 {
+    protected static $latestResponse;
+
     protected function setUp(): void
     {
         parent::setUp();
