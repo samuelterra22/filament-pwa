@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Support\Facades\File;
+
 // ─── Happy Paths ────────────────────────────────────────────────
 
 test('service worker endpoint returns 200', function () {
@@ -75,7 +77,7 @@ test('service worker reflects custom icon paths', function () {
 
 test('service worker returns 404 when js file is missing', function () {
     // Partial mock so only exists() is intercepted, other methods work normally
-    Illuminate\Support\Facades\File::partialMock()
+    File::partialMock()
         ->shouldReceive('exists')
         ->andReturn(false);
 
